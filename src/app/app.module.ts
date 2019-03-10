@@ -13,6 +13,9 @@ import { appRoutes } from '../routes/routes';
 import { MatInputModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ParticlesModule } from 'angular-particle';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatTooltipModule,
     RouterModule.forRoot(appRoutes),
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ParticlesModule,
+    HttpClientModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,11 +4,15 @@ import { AcceuilComponent } from '../app/acceuil/acceuil.component';
 
 export const appRoutes: Routes = [
 	{
-		path: 'commun-acceuil',
+		path: '',
+		component: LoginComponent
+	},
+	{
+		path: 'commun-accueil',
 		component: AcceuilComponent
 	},
 	{
-		path: '',
+		path: 'login',
 		component: LoginComponent
-	}
+	},
 ];

@@ -1,0 +1,16 @@
+@keyframes on_arrival
+{
+	from {
+		margin-top: 80%;
+	}
+	to {
+		margin-top: 0%;
+	}
+}
+
+div {
+	margin-top: 0%;
+	text-align: center;
+	animation: on_arrival;
+	animation-duration: 0.5s;
+}

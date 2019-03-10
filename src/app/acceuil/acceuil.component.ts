@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-acceuil',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcceuilComponent implements OnInit {
 
-  constructor() { }
+  receive: string;
+  constructor(private data: SharedService) { }
 
   ngOnInit() {
+    this.data.currentMessage.subscribe(receive => this.receive = receive);
   }
-
 }
