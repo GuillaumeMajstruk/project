@@ -3,7 +3,7 @@
 #make sure that pip3 is installed on your system
 
 #installing brew if not installed
-sudo /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 #installing python3 and so pip3 if not installed
 brew install python3
