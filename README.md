@@ -21,8 +21,8 @@ In a new terminal window, cd to root project directory.
 ## Starting the tornado server
 
 In a new terminal window, cd to `./project/python_src/`.
-2) Run `./configure_python.sh` to install python and its dependencies.
-3) Run `python3 tornadoserver.py` to launch the server.
+1) Run `./configure_python.sh` to install python and its dependencies.
+2) Run `python3 tornadoserver.py` to launch the server.
 
 Server is launched on localhost port 8888. To make sure it is online, browse to `localhost:8888` in your web browser,
 you should see 'Tornado Server Status: ONLINE' message at the top of the page.
