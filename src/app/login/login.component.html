@@ -1,15 +1,17 @@
-<script>
-  consoel.log("in login");
-</script>
 <particles [style]="myStyle" [params]="myParams" [width]="width" [height]="height"></particles>
-  <div class="example-container">
+  <div class="input-container" [@error]="onAddErrAnim">
     <div class="input">
       <mat-form-field>
         <input class="inputfield" matInput placeholder="Enter your e-mail" [formControl]="email" required>
         <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
       <mat-form-field>
-        <input class="inputfield" matInput placeholder="Enter your password" [formControl]="pass" [type]="hide ? 'password' : 'text'">
+        <input
+          class="inputfield"
+          matInput placeholder="Enter your password"
+          [formControl]="pass"
+          [type]="hide ? 'password' : 'text'"
+        >
         <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </mat-form-field>
       <button mat-button (click)="tryLogin()">connect</button>

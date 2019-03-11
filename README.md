@@ -2,25 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
 
-## Development server
+## Starting Angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In a new terminal window, run `npm start` at the root of the project to compile and start angular services.
+You may install the missing packages that are not installed by default such as:
+	-> angular-particle,
+	-> angular material.
+Finally browse to `localhost:4200` to reach the login page.
 
-## Code scaffolding
+## Starting the tornado server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In a new terminal window, cd to python_src to find `app.py` that is containing the back-end source code (Python3 tornado)
+before running `python3 app.py`, make sure to install all the required packages:
+	-> tornado,
+	-> json,
+	-> chardet,
+	-> pandas,
+	-> csv.
+If any of these packages is/are missing, install it/them using `pip3 install pkg-name`.
+Once in the correct directory `./project/python_src/` run `python3 app.py` to launch the server.
+Server is launched on localhost port 8888. To make sure it is online, browse to `localhost:8888` in your web browser,
+you should see 'Tornado Server Status: ONLINE' message at the top of the page.
 
-## Build
+## IMPORTANT
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+IT IS IMPORTANT TO RUN THE SERVER USING `python3`.
+IT IS IMPORTANT TO RUN PYTHON SERVER AND ANGULAR CLI IN TWO DISTINCTS TERMINAL
+TORNADO MUST BE RUN FROM THE `python_src/` DIRECTORY SO THAT IT CAN CORRECTLY FIND THE USR/PASS DATABASE
+ANGULAR SHOULD BE RUN FROM THE ROOT DIRECTORY OF THE PROJECT.
 
 ## Further help
 

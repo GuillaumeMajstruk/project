@@ -25,7 +25,7 @@ def xlsxToCsv(fichier, nomFichier):
 
 class Hello(tornado.web.RequestHandler):
     def get(self):
-        self.write("Hello, world")
+        self.write("Tornado Server Status: ONLINE")
 
 class User(tornado.web.RequestHandler):
     def set_default_headers(self):

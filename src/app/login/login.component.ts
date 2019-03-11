@@ -1,16 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, Validators, FormGroupDirective, NgForm} from '@angular/forms';
 import { LoginService } from '../services/login/login.service';
 import { Router } from '@angular/router';
 import { SharedService } from '../services/shared.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { shake } from 'ngx-animate';
+import { trigger, state, style, transition, useAnimation } from '@angular/animations';
+
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  animations: [
+    trigger('error', [
+      state('false, true', style({})),
+      transition('false => true', useAnimation(shake)),
+      ]),
+  ]
 })
+
 export class LoginComponent implements OnInit {
 
   constructor(private loginService : LoginService,
@@ -18,6 +34,7 @@ export class LoginComponent implements OnInit {
     private sharedService: SharedService,
     private snackbar: MatSnackBar) { }
 
+  onAddErrAnim: boolean = false;
   email = new FormControl('', [Validators.required, Validators.email]);
   pass = new FormControl('', [Validators.required]);
   hide = true;
@@ -36,9 +53,11 @@ export class LoginComponent implements OnInit {
   }
 
   tryLogin(){
+    this.onAddErrAnim = false;
     if (!this.email.value || !this.pass.value)
     {
-      this.snackbar.open('You must enter an email and a password !', 'OK', { duration: 5000, verticalPosition: 'top'});
+      this.snackbar.open('You must enter an email and a password !', 'OK', { duration: 5000, verticalPosition: 'bottom'});
+      this.onAddErrAnim = true;
       return ;
     }
     var datas = {
@@ -58,14 +77,18 @@ export class LoginComponent implements OnInit {
       }
       else if (res['response'] == -1)
       {
-        this.snackbar.open('Account not found !', 'OK', { duration: 5000, verticalPosition: 'top'});
+        this.onAddErrAnim = true;
+        this.snackbar.open('Account not found !', 'OK', { duration: 5000, verticalPosition: 'bottom'});
       }
       else
       {
-        this.snackbar.open('Wrong password for this account !', 'OK', { duration: 5000, verticalPosition: 'top' });
+        this.onAddErrAnim = true;
+        this.snackbar.open('Wrong password for this account !', 'OK', { duration: 5000, verticalPosition: 'bottom' });
       }
     });
   }
+
+  matcher = new MyErrorStateMatcher();
 
   ngOnInit() {
     this.sharedService.currentMessage.subscribe(data => this.data = data);
