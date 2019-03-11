@@ -1,3 +1,23 @@
+@keyframes appear {
+	from {
+		background-color: rgba(49, 143, 36, 0);
+		border: 2px solid rgba(145, 233, 142, 0);
+	}
+	to {
+		background-color: rgba(49, 143, 36, 0.2);
+		border: 2px solid rgba(145, 233, 142, 1);
+	}
+}
+
+@keyframes text_appear {
+	from {
+		color: rgba(145, 233, 142, 0);
+	}
+	to {
+		color: rgba(145, 233, 142, 1);
+	}
+}
+
 .input-container {
 	position: absolute;
 	display: block;
@@ -8,7 +28,9 @@
 	padding: 50px;
 	border-radius: 300px;
 	background-color: rgba(49, 143, 36, 0.2);
-	border: 2px solid rgb(145, 233, 142);
+	border: 2px solid rgba(145, 233, 142, 1);
+	animation: appear;
+	animation-duration: 2s;
 }
 .input {
 	position: relative;
@@ -28,4 +50,6 @@
 	left: 50%;
 	text-align: center;
 	transform: translate(-50%, -50%);
+	animation: text_appear;
+	animation-duration: 2s;
 }
