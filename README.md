@@ -16,8 +16,8 @@ Finally browse to `localhost:4200` to reach the login page.
 
 ## Starting the tornado server
 
-In a new terminal window, cd to python_src to find `app.py` that is containing the back-end source code (Tornado),
-before running `python3 app.py`, make sure to install all the required packages:
+In a new terminal window, cd to python_src to find `app.py` that is containing the back-end source code (Tornado).
+Before running `python3 app.py`, make sure to install all the required packages:
 	-> tornado,
 	-> json,
 	-> chardet,
@@ -31,8 +31,8 @@ you should see 'Tornado Server Status: ONLINE' message at the top of the page.
 ## IMPORTANT
 
 IT IS IMPORTANT TO RUN THE SERVER USING `python3`.
-IT IS IMPORTANT TO RUN PYTHON SERVER AND ANGULAR CLI IN TWO DISTINCTS TERMINAL
-TORNADO MUST BE RUN FROM THE `python_src/` DIRECTORY SO THAT IT CAN CORRECTLY FIND THE USR/PASS DATABASE
+IT IS IMPORTANT TO RUN PYTHON SERVER AND ANGULAR CLI IN __TWO DISTINCT TERMINAL__.
+TORNADO __MUST BE RUN FROM THE `python_src/` DIRECTORY__ SO THAT IT CAN CORRECTLY FIND THE USR/PASS DATABASE.
 ANGULAR SHOULD BE RUN FROM THE ROOT DIRECTORY OF THE PROJECT.
 
 ## Further help
