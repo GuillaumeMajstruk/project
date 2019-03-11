@@ -10,7 +10,7 @@ Run `git clone https://github.com/GuillaumeMajstruk/project.git project` to get 
 
 1) Install npm with node.js from [npm install](https://www.npmjs.com/get-npm)
 2) Install Angular CLI:
-..* Run `npm install -g @angular/cli`.
+* Run `npm install -g @angular/cli`.
 
 ## Starting Angular
 
