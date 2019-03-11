@@ -6,30 +6,30 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `git clone https://github.com/GuillaumeMajstruk/project.git project` to get the project.
 
+## Installing dependencies
+
+1) Install npm with node.js from [npm install](https://www.npmjs.com/get-npm)
+2) Install Angular CLI:
+..* Run `npm install -g @angular/cli`.
+
 ## Starting Angular
 
 In a new terminal window, cd to root project directory.
-1) run `npm install` to install project packages.
-2) run `npm start` to compile and start angular services and server.
-
-Finally browse to `localhost:4200` to reach the login page.
+1) Run `npm install` to install project packages.
+2) Run `npm start` to compile and start angular services and server.
 
 ## Starting the tornado server
 
-In a new terminal window, cd to python_src to find `tornadoserver.py` that is containing the back-end source code (Tornado).
+1) In a new terminal window, cd to `./project/python_src/`.
+2) Run `./configure_python.sh` to install python and its dependencies.
+3) Run `python3 tornadoserver.py` to launch the server.
 
-Before running `python3 app.py`, make sure to install all the required packages:
-	-> tornado,
-	-> json,
-	-> chardet,
-	-> pandas,
-	-> csv.
-
-If any of these packages is/are missing, install it/them using `pip3 install pkg-name`.
-
-Once in the correct directory `./project/python_src/` run `python3 tornadoserver.py` to launch the server.
 Server is launched on localhost port 8888. To make sure it is online, browse to `localhost:8888` in your web browser,
 you should see 'Tornado Server Status: ONLINE' message at the top of the page.
+
+## Navigate to login page
+
+Once tornado server __and__ angular server launched, browse to 'localhost:4200' to get to the login page.
 
 ## IMPORTANT
 
