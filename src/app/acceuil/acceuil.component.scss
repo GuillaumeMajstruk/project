@@ -1,16 +1,31 @@
-@keyframes on_arrival
-{
-	from {
-		margin-top: 80%;
-	}
-	to {
-		margin-top: 0%;
-	}
+.input-container {
+	position: absolute;
+	display: block;
+	top: calc((100vh - 450px) /2);
+	left: calc((100vw - 650px) /2);
+	width: 550px;
+	height: 350px;
+	padding: 50px;
+	border-radius: 300px;
+	background-color: rgba(49, 143, 36, 0.2);
+	border: 2px solid rgb(145, 233, 142);
+}
+.input {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	text-align: center;
+	color : rgb(145, 233, 142);
 }
 
-div {
-	margin-top: 0%;
+.message {
+	position: fixed;
+	top: 50%;
+	left: 50%;
 	text-align: center;
-	animation: on_arrival;
-	animation-duration: 0.5s;
+	transform: translate(-50%, -50%);
 }

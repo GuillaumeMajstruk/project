@@ -1,3 +1,8 @@
-<div *ngIf="receive">
-  Connexion établie ! bienvenue {{receive}}
+<particles [style]="myStyle" [params]="myParams" [width]="width" [height]="height"></particles>
+<div class="input-container">
+  <div class="input">
+      <div *ngIf="receive" class="message">
+          Connexion établie !
+          <br>Bienvenue {{receive}}
+  </div>
 </div>
