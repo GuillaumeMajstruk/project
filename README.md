@@ -2,17 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
 
+## Getting the project
+
+Run `git clone https://github.com/GuillaumeMajstruk/project.git project` to get the project.
+
 ## Starting Angular
 
 In a new terminal window, run `npm start` at the root of the project to compile and start angular services.
-You may install the missing packages that are not installed by default such as:
+If you have compiling error(s), make sure that you installed all required packages such as:
 	-> angular-particle,
 	-> angular material.
 Finally browse to `localhost:4200` to reach the login page.
 
 ## Starting the tornado server
 
-In a new terminal window, cd to python_src to find `app.py` that is containing the back-end source code (Python3 tornado)
+In a new terminal window, cd to python_src to find `app.py` that is containing the back-end source code (Tornado),
 before running `python3 app.py`, make sure to install all the required packages:
 	-> tornado,
 	-> json,
