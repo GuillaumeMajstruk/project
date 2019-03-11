@@ -20,7 +20,7 @@ In a new terminal window, cd to root project directory.
 
 ## Starting the tornado server
 
-1) In a new terminal window, cd to `./project/python_src/`.
+In a new terminal window, cd to `./project/python_src/`.
 2) Run `./configure_python.sh` to install python and its dependencies.
 3) Run `python3 tornadoserver.py` to launch the server.
 
